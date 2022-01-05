@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "id": 2,
+      "text": "Clean Up My Room",
+      "day": "Feb 10th at 8:00am",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Do My Homework",
+      "day": "Feb 10th at 10:00am",
+      "reminder": false
+    }
+  ]
+}
