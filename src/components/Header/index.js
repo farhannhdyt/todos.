@@ -1,10 +1,14 @@
-import { Component, Heading } from "./style"
+import { Component, Heading, Button } from "./style"
+import { FiPlus, FiX } from "react-icons/fi"
 import PropTypes from 'prop-types'
 
-const Header = (props) => {
+const Header = ({ title, onAdd, showAddTodo }) => {
   return (
     <Component>
-      <Heading>{props.title}</Heading>
+      <Heading>{title}</Heading>
+      <Button onClick={onAdd}>
+        { showAddTodo ? (<FiX />) : (<FiPlus />) }
+      </Button>
     </Component>
   )
 }

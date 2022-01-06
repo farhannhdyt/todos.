@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { PlusImage, CloseImage } from './assets'
 import { AddTodo, Footer, Header, Todos } from "./components"
 import { GlobalStyles } from "./plugins"
 
@@ -86,10 +85,7 @@ const App = () => {
   
   return (
     <div className="container">
-      <Header />
-      <button className='btn-cta' onClick={() => setShowAddTodo(!showAddTodo)} title="Add Todo">
-        { showAddTodo ? (<img src={CloseImage} />) : (<img src={PlusImage} />) }
-      </button>
+      <Header showAddTodo={showAddTodo} onAdd={() => setShowAddTodo(!showAddTodo)} />
 
       {showAddTodo && <AddTodo onAdd={addTodo} />}
       <Todos todos={todos} onDelete={deleteTodo} onToggle={toggleReminder} />
